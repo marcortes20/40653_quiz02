@@ -1,6 +1,6 @@
 import React from "react";
 
-type Product = {
+export type Product = {
     id: number;
     name: string;
     step: number;
@@ -8,10 +8,16 @@ type Product = {
 }
 
 type MyContextData = {
-    
+    Product: Product[],
+    setProduct: (products: Product[]) => void
 }
 
 const MyContext = React.createContext<MyContextData>({
+
+    Product: [],
+    setProduct() {
+
+    },
 
 });
 
